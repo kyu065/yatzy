@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell.x {
+    background-color: #90EE90; /* Green for player X */
+}
+
+.cell.o {
+    background-color: #FFFFE0; /* Yellow for player O */
+}
+
+@keyframes flash {
+    0% { background-color: red; }
+    33% { background-color: green; }
+    66% { background-color: blue; }
+    100% { background-color: red; }
+}
+
+.cell.winner {
+    animation: flash 1s infinite;
+}
+
+#result {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
