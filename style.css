@@ -12,6 +12,12 @@ body {
     text-align: center;
 }
 
+.score-board {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);

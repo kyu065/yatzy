@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const cells = document.querySelectorAll(".cell");
     const restartButton = document.getElementById("restart");
     const resultDiv = document.getElementById("result");
+    const scoreXD = document.getElementById("scoreX");
+    const scoreOD = document.getElementById("scoreO");
+    
     let currentPlayer = "X";
     let boardState = Array(9).fill(null);
+    let scoreX = 0;
+    let scoreO = 0;
     const winMap = new Map();
 
     const winningCombinations = [
@@ -52,10 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     cells[idx].classList.add('winner');
                 });
                 displayResult(`${currentPlayer === "X" ? "Player" : "Computer"} wins!`);
+                updateScore(currentPlayer);
+                setTimeout(resetGame, 1000);
                 return;
             }
             if (checkDraw()) {
                 displayResult("It's a draw!");
+                setTimeout(resetGame, 1000);
                 return;
             }
             currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -82,10 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 cells[idx].classList.add('winner');
             });
             displayResult(`${currentPlayer === "X" ? "Player" : "Computer"} wins!`);
+            updateScore(currentPlayer);
+            setTimeout(resetGame, 1000);
             return;
         }
         if (checkDraw()) {
             displayResult("It's a draw!");
+            setTimeout(resetGame, 1000);
             return;
         }
         currentPlayer = "X";
@@ -99,6 +110,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         currentPlayer = "X";
         displayResult("");
+    }
+
+    function updateScore(player) {
+        if (player === "X"){
+            scoreX++;
+            scoreXD.textContent = scoreX;
+        } else {
+            scoreO++
+            scoreOD.textContent = scoreO;
+        }
     }
 
     cells.forEach(cell => cell.addEventListener("click", handleClick));
