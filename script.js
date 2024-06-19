@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultDiv = document.getElementById("result");
     const scoreXD = document.getElementById("scoreX");
     const scoreOD = document.getElementById("scoreO");
-    
+
     let currentPlayer = "X";
     let boardState = Array(9).fill(null);
     let scoreX = 0;
@@ -113,15 +113,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateScore(player) {
-        if (player === "X"){
+        if (player === "X") {
             scoreX++;
             scoreXD.textContent = scoreX;
         } else {
-            scoreO++
+            scoreO++;
             scoreOD.textContent = scoreO;
         }
     }
 
     cells.forEach(cell => cell.addEventListener("click", handleClick));
-    restartButton.addEventListener("click", resetGame);
+    restartButton.addEventListener("click", () => {
+        resetGame();
+        scoreX = 0;
+        scoreO = 0;
+        scoreXD.textContent = scoreX;
+        scoreOD.textContent = scoreO;
+    });
 });
