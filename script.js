@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 displayResult(`${currentPlayer === "X" ? "Player" : "Computer"} wins!`);
                 updateScore(currentPlayer);
-                setTimeout(resetGame, 1000);
+                setTimeout(resetGame, 1500);
                 return;
             }
             if (checkDraw()) {
                 displayResult("It's a draw!");
-                setTimeout(resetGame, 1000);
+                setTimeout(resetGame, 1500);
                 return;
             }
             currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -91,12 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             displayResult(`${currentPlayer === "X" ? "Player" : "Computer"} wins!`);
             updateScore(currentPlayer);
-            setTimeout(resetGame, 1000);
+            setTimeout(resetGame, 1500);
             return;
         }
         if (checkDraw()) {
             displayResult("It's a draw!");
-            setTimeout(resetGame, 1000);
+            setTimeout(resetGame, 1500);
             return;
         }
         currentPlayer = "X";

@@ -16,10 +16,11 @@ body {
     width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 5px;
 }
 
 .score-board {
+    font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
@@ -41,6 +42,14 @@ body {
     font-size: 2rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.cell:hover {
+    background-color: rgb(201, 211, 211); /* Slightly darker on hover */
+    box-shadow: 0 0 0 4px rgba(70, 93, 98, 0.5), inset 0 0 4px rgb(81, 154, 172); /* Highlight effect */
 }
 
 .cell.x {
@@ -60,6 +69,10 @@ body {
 
 .cell.winner {
     animation: flash 1s infinite;
+}
+
+h1 {
+    font-weight: 900;  
 }
 
 #result {
