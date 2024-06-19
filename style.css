@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(lightskyblue, white);
+    background: linear-gradient(#87cefa, #ffffff);
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -48,8 +48,8 @@ body {
 }
 
 .cell:hover {
-    background-color: rgb(201, 211, 211); /* Slightly darker on hover */
-    box-shadow: 0 0 0 4px rgba(70, 93, 98, 0.5), inset 0 0 4px rgb(81, 154, 172); /* Highlight effect */
+    background-color: #cad3d3; 
+    box-shadow: 0 0 0 4px #465d6280, inset 0 0 4px #519aac;
 }
 
 .cell.x {
