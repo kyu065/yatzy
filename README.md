@@ -10,10 +10,18 @@ Game States
 - Computer wins
 - Draw
 
-Images
+Game State Images:
+
+Start State
 ![Game Screenshot - Start](start.png)
+
+Player win State
 ![Game Screenshot - Player win](p.png)
+
+Computer win State
 ![Game Screenshot - computer win](c.png)
+
+Draw State
 ![Game Screenshot - Draw](d.png)
 
 Contributors
