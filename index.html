@@ -7,28 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="image.png" alt="Mascot" class="logo">
+    <header>
         <h1>Tic-Tac-Toe</h1>
-        <div class="score-board">
-            <div>Player X: <span id="scoreX">0</span></div>
-            <div>Player O: <span id="scoreO">0</span></div>        
+    </header>
+    <main>    
+        <div class="container">
+            <img src="docs/assets/design_system/image.png" alt="Mascot" class="logo">
+            <div class="score-board">
+                <div>Player X: <span id="scoreX">0</span></div>
+                <div>Player O: <span id="scoreO">0</span></div>        
+            </div>
+            <div id="game-board" class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div id="result" class="result"></div>
+            <button id="restart">Restart Game</button>
         </div>
-        <div id="game-board" class="board">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
-        </div>
-        <div id="result" class="result"></div>
-        <button id="restart">Restart Game</button>
-    </div>
+    </main>
+
+    <footer>
+        <p> The following is 3x3 grid game where a player must match 3 symbols horizontally, vertically or diagonally</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
-<!-- test commit cause git is being dumb -->
